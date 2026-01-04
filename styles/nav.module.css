@@ -1,0 +1,158 @@
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  padding: 0 70px;
+  background-color: rgb(255, 255, 255); 
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  z-index: 50;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 58px;    
+  width: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+
+  position: relative;
+  transition:
+    color 0.4s ease,
+    font-weight 0.2s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+  background-color: #e9690d;
+
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  font-weight: 700;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.cta {
+  padding: 8px 20px;
+  background-color: white;
+  color: black;
+
+  border-radius: 22px;
+  border: 2px solid #f97316; /* ORANGE outline */
+
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 
+    box-shadow 0.4s ease,
+    transform 0.2s ease;
+}
+
+/* Hover effect: orange radiates outward */
+.cta:hover {
+  box-shadow: 
+    0 0 0 4px rgba(249, 115, 22, 0.35),
+    0 0 0 8px rgba(249, 115, 22, 0.2),
+    0 0 0 12px rgba(249, 115, 22, 0.1);
+
+  transform: translateY(-1px);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
+  background: white;
+  border-radius: 12px;
+  padding: 12px 0;
+  min-width: 220px;
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+
+.menuItem {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menuItem:hover {
+  background-color: #f9fafb;
+}
+
+
+.chevron {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+
+  margin-left: 6px;
+
+  border-right: 1.8px solid #000;
+  border-bottom: 1.8px solid #000;
+
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background: none;  /* 👈 remove background */
+  border-radius: 0;
+
+  transition: transform 0.2s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-2px);
+}

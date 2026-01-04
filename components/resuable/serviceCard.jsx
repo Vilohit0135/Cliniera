@@ -1,61 +1,64 @@
+"use client";
+
 import Link from "next/link";
 
 export default function ServiceCard({ service }) {
   return (
     <div
-      className={`
-        group rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] text-center justify p-6 transition-all duration-300
-        cursor-pointer
-        ${
-          service.highlight
-            ? "bg-[#E56027] text-white"
-            : "bg-white hover:bg-[#E56027] hover:text-white hover:shadow-xl"
-        }
-      `}
+      className="
+        group
+        rounded-2xl bg-white
+        p-8
+        shadow-lg
+        transition
+        hover:bg-[#E56027]
+      "
     >
       {/* ICON */}
-<div
-  className={`
-    mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full
-    transition
-    bg-[#fff4ee] group-hover:bg-white/20
-  `}
->
-  <img
-    src={service.icon}
-    alt={service.title}
-    className="h-6 w-6 transition"
-  />
-</div>
-
+      <div
+        className="
+          mx-auto mb-6 flex h-12 w-12 items-center justify-center
+          rounded-full bg-[#fff4ee]
+          transition
+          group-hover:bg-white/20
+        "
+      >
+        <img
+          src={service.icon}
+          alt={service.title}
+          className="h-6 w-6"
+        />
+      </div>
 
       {/* TITLE */}
-      <h3 className="text-[16px] font-semibold">
+      <h3 className="text-center text-[18px] font-semibold text-black transition group-hover:text-white">
         {service.title}
       </h3>
 
       {/* DESCRIPTION */}
-      <p className="mt-3 text-[14px] leading-6 opacity-90">
+      <p className="mt-3 text-center text-[14px] leading-6 text-gray-600 transition group-hover:text-white/90">
         {service.description}
       </p>
 
-      {/* LINK */}
+      {/* LEARN MORE */}
+      <div className="mt-6 flex justify-center">
         <Link
-        href={`/services/${service.slug}`}
-        className="
-            mt-4 inline-flex items-center justify-center
-            rounded-full px-4 py-2
-            text-[14px] font-semibold
+          href={`/services/${service.slug}`}
+          className="
+            inline-flex items-center gap-2
+            rounded-full
+            border border-transparent
+            px-5 py-2
+            text-[14px] font-medium
             text-[#E56027]
-            transition-all duration-300
+            transition
+            group-hover:border-white
             group-hover:text-white
-            group-hover:border group-hover:border-white
-        "
+          "
         >
-        Learn More →
+          Learn More →
         </Link>
-
-
+      </div>
     </div>
   );
 }

@@ -64,15 +64,15 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-4 text-[14px] text-white/90">
               <li className="flex items-center gap-3">
-                <img src="/icons/Facebook.svg" className="h-6 w-6" />
+                <img src="/icons/facebook.svg" className="h-6 w-6" />
                 Facebook
               </li>
               <li className="flex items-center gap-3">
-                <img src="/icons/LinkedIn.svg" className="h-6 w-6" />
+                <img src="/icons/linkedin.svg" className="h-6 w-6" />
                 LinkedIn
               </li>
               <li className="flex items-center gap-3">
-                <img src="/icons/Twitter.svg" className="h-6 w-6" />
+                <img src="/icons/twitter.svg" className="h-6 w-6" />
                 Twitter
               </li>
             </ul>

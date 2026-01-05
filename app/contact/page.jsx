@@ -5,7 +5,7 @@ import WorkHours from "../../components/resuable/workHoursCard";
 
 export default function ContactPage() {
   return (
-    <section className="w-full bg-[#E56027] py-24 pb-0">
+    <section className="w-full bg-[#f3d5bd] py-24 pb-0">
       <div className="mx-auto max-w-[1440px] px-16">
 
         {/* HEADER */}

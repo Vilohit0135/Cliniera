@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-[800px] w-full">
+    <section className="relative h-[800px] w-full bg-[#f5f5f5]">
       
       {/* LEFT BACKGROUND PANEL */}
       <div className="absolute inset-y-0 left-0 w-[99%] bg-[#f3d5bd]"></div>
@@ -106,7 +106,7 @@ export default function Hero() {
 
 
         {/* RIGHT CONTENT AREA */}
-        <div className="relative flex justify-start translate-y-5">
+        <div className="relative flex justify-start translate-y-6 translate-x-10">
 
           
           {/* GREY IMAGE PLACEHOLDER */}
@@ -162,83 +162,78 @@ export default function Hero() {
 
       {/* STATS BANNER */}
 
-      <div className="absolute left-1/2 bottom-[-130px] z-20 w-full -translate-x-1/2 translate-y-2">
-        <div className="flex justify-between bg-[#E56027] px-[50px] py-[6px] text-white shadow-xl">
+<div className="absolute left-1/2 bottom-[-110px] z-20 w-full -translate-x-1/2 -translate-y-8">
+  <div className="flex justify-between bg-[#E56027] px-8 py-3 text-white shadow-lg">
 
-          {/* ITEM 1 */}
-          <div className="max-w-[260px]">
-            <div className="flex items-center gap-4">
-              <img
-                src="/icons/Icon1.svg"
-                alt="Years of Experience"
-                className="h-[55px] w-[55px]"
-              />
-              <div>
-                <p className="text-[40px] leading-[48px] font-semibold">50+</p>
-                <p className="text-[16px] font-medium">Years of Experience</p>
-              </div>
-            </div>
-            <p className="mt-3 text-[14px] leading-[22px] text-white/90">
-              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-          </div>
+    {/* ITEM 1 */}
+    <div className="flex max-w-[260px] items-start gap-3">
+      <img src="/icons/Icon1.svg" className="h-7 w-7 shrink-0" />
 
-          {/* ITEM 2 */}
-          <div className="max-w-[260px]">
-            <div className="flex items-center gap-4">
-              <img
-                src="/icons/Icon2.svg"
-                alt="Satisfied Clients"
-                className="h-[55px] w-[55px]"
-              />
-              <div>
-                <p className="text-[40px] leading-[48px] font-semibold">3,124+</p>
-                <p className="text-[16px] font-medium">Satisfied Clients</p>
-              </div>
-            </div>
-            <p className="mt-3 text-[14px] leading-[22px] text-white/90">
-              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-          </div>
+      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+        50+
+      </p>
 
-          {/* ITEM 3 */}
-          <div className="max-w-[260px]">
-            <div className="flex items-center gap-4">
-              <img
-                src="/icons/Icon3.svg"
-                alt="Experienced Doctors"
-                className="h-[55px] w-[55px]"
-              />
-              <div>
-                <p className="text-[40px] leading-[48px] font-semibold">231+</p>
-                <p className="text-[16px] font-medium">Experienced Doctors</p>
-              </div>
-            </div>
-            <p className="mt-3 text-[14px] leading-[22px] text-white/90">
-              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-          </div>
-
-          {/* ITEM 4 */}
-          <div className="max-w-[260px]">
-            <div className="flex items-center gap-4">
-              <img
-                src="/icons/Icon4.svg"
-                alt="Hospital Rooms"
-                className="h-[55px] w-[55px]"
-              />
-              <div>
-                <p className="text-[40px] leading-[48px] font-semibold">17+</p>
-                <p className="text-[16px] font-medium">Hospital Rooms</p>
-              </div>
-            </div>
-            <p className="mt-3 text-[14px] leading-[22px] text-white/90">
-              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-          </div>
-
-        </div>
+      <div>
+        <p className="text-[12px] font-medium">Years of Experience</p>
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+          Ut elit tellus, luctus nec ullamcorper mattis.
+        </p>
       </div>
+    </div>
+
+    {/* ITEM 2 */}
+    <div className="flex max-w-[260px] items-start gap-3">
+      <img src="/icons/Icon2.svg" className="h-7 w-7 shrink-0" />
+
+      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+        3,124+
+      </p>
+
+      <div>
+        <p className="text-[12px] font-medium">Satisfied Clients</p>
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+          Ut elit tellus, luctus nec ullamcorper mattis.
+        </p>
+      </div>
+    </div>
+
+    {/* ITEM 3 */}
+    <div className="flex max-w-[260px] items-start gap-3">
+      <img src="/icons/Icon3.svg" className="h-7 w-7 shrink-0" />
+
+      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+        231+
+      </p>
+
+      <div>
+        <p className="text-[12px] font-medium">Experienced Doctors</p>
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+          Ut elit tellus, luctus nec ullamcorper mattis.
+        </p>
+      </div>
+    </div>
+
+    {/* ITEM 4 */}
+    <div className="flex max-w-[260px] items-start gap-3">
+      <img src="/icons/Icon4.svg" className="h-7 w-7 shrink-0" />
+
+      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+        17+
+      </p>
+
+      <div>
+        <p className="text-[12px] font-medium">Hospital Rooms</p>
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+          Ut elit tellus, luctus nec ullamcorper mattis.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
 
 
 

@@ -22,7 +22,7 @@ export default function AboutUs() {
 
         {/* TOP TEXT */}
         <p className="text-center text-[12px] font-semibold text-[#E56027]">
-          Welcome to Avida
+          Welcome to Cliniera
         </p>
 
         <h2 className="mt-3 text-center text-[40px] leading-[44px] font-semibold text-black">

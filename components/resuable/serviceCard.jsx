@@ -26,7 +26,7 @@ export default function ServiceCard({ service }) {
         <img
           src={service.icon}
           alt={service.title}
-          className="h-6 w-6"
+          className="h-10 w-10"
         />
       </div>
 
@@ -36,7 +36,7 @@ export default function ServiceCard({ service }) {
       </h3>
 
       {/* DESCRIPTION */}
-      <p className="mt-3 text-center text-[14px] leading-6 text-gray-600 transition group-hover:text-white/90">
+      <p className="mt-3 text-justify hyphens-auto text-[14px] leading-6 text-gray-600 transition group-hover:text-white/90">
         {service.description}
       </p>
 

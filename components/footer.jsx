@@ -10,11 +10,14 @@ export default function Footer() {
           {/* BRAND */}
           <div className="col-span-1 max-lg:col-span-2">
             {/* LOGO */}
-            <img
+            <div className="bg-white rounded-3xl p-3 inline-flex items-center justify-center">
+              <img
               src="/Cliniera_logo_tran.webp"
               alt="CliniEra Logo"
-              className="h-13"
+              className="h-10"
             />
+            </div>
+
 
             <p className="mt-4 max-w-[280px] text-[14px] leading-relaxed text-white/90">
               End-to-end clinical research solutions delivering quality,

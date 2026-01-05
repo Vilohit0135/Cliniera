@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative h-[800px] w-full bg-[#f5f5f5]">
       
       {/* LEFT BACKGROUND PANEL */}
-      <div className="absolute inset-y-0 left-0 w-[99%] bg-[#f3d5bd]"></div>
+      <div className="absolute inset-y-0 left-0 w-full bg-[#f3d5bd]"></div>
 
       {/* CONTENT WRAPPER */}
       <div className="relative z-10 mx-auto h-full max-w-[1440px] px-16">
@@ -106,7 +106,7 @@ export default function Hero() {
 
 
         {/* RIGHT CONTENT AREA */}
-        <div className="relative flex justify-start translate-y-6 translate-x-10">
+        <div className="relative flex justify-start -translate-y-8 translate-x-9">
 
           
           {/* GREY IMAGE PLACEHOLDER */}
@@ -116,7 +116,7 @@ export default function Hero() {
             alt="Cliniera Healthcare"
             width={450}
             height={650}
-            className="h-[750px] w-[650px] rounded-md object-cover"
+            className="h-[830px] w-[650px] rounded-md object-cover"
           />
 
 
@@ -166,68 +166,98 @@ export default function Hero() {
   <div className="flex justify-between bg-[#E56027] px-8 py-3 text-white shadow-lg">
 
     {/* ITEM 1 */}
-    <div className="flex max-w-[260px] items-start gap-3">
-      <img src="/icons/Icon1.svg" className="h-7 w-7 shrink-0" />
+    <div className="flex max-w-[260px] items-center gap-3">
+      {/* ICON */}
+      <img
+        src="/icons/Icon1.svg"
+        className="h-9 w-9 shrink-0"
+      />
 
-      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
-        50+
-      </p>
+      {/* TEXT COLUMN */}
+      <div className="flex flex-col">
+        
+        {/* TOP ROW */}
+        <div className="flex items-baseline gap-2">
+          <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+            50+
+          </p>
+          <p className="text-[12px] font-medium">
+            Years of Experience
+          </p>
+        </div>
 
-      <div>
-        <p className="text-[12px] font-medium">Years of Experience</p>
-        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+        {/* DESCRIPTION (starts under 50+) */}
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85 pl-[2px]">
           Ut elit tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
     </div>
 
     {/* ITEM 2 */}
-    <div className="flex max-w-[260px] items-start gap-3">
-      <img src="/icons/Icon2.svg" className="h-7 w-7 shrink-0" />
 
-      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
-        3,124+
-      </p>
+    <div className="flex max-w-[260px] items-center gap-3">
+      <img src="/icons/Icon2.svg" className="h-9 w-9 shrink-0" />
 
-      <div>
-        <p className="text-[12px] font-medium">Satisfied Clients</p>
-        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+      <div className="flex flex-col">
+        <div className="flex items-baseline gap-2">
+          <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+            3,124+
+          </p>
+          <p className="text-[12px] font-medium">
+            Satisfied Clients
+          </p>
+        </div>
+
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85 pl-[2px]">
           Ut elit tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
     </div>
+
 
     {/* ITEM 3 */}
-    <div className="flex max-w-[260px] items-start gap-3">
-      <img src="/icons/Icon3.svg" className="h-7 w-7 shrink-0" />
+   
+    <div className="flex max-w-[260px] items-center gap-3">
+      <img src="/icons/Icon3.svg" className="h-9 w-9 shrink-0" />
 
-      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
-        231+
-      </p>
+      <div className="flex flex-col">
+        <div className="flex items-baseline gap-2">
+          <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+            231+
+          </p>
+          <p className="text-[12px] font-medium">
+            Experienced Doctors
+          </p>
+        </div>
 
-      <div>
-        <p className="text-[12px] font-medium">Experienced Doctors</p>
-        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85 pl-[2px]">
           Ut elit tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
     </div>
+
 
     {/* ITEM 4 */}
-    <div className="flex max-w-[260px] items-start gap-3">
-      <img src="/icons/Icon4.svg" className="h-7 w-7 shrink-0" />
 
-      <p className="text-[26px] leading-[30px] font-semibold shrink-0">
-        17+
-      </p>
+    <div className="flex max-w-[260px] items-center gap-3">
+      <img src="/icons/Icon4.svg" className="h-9 w-9 shrink-0" />
 
-      <div>
-        <p className="text-[12px] font-medium">Hospital Rooms</p>
-        <p className="mt-1 text-[11px] leading-[16px] text-white/85">
+      <div className="flex flex-col">
+        <div className="flex items-baseline gap-2">
+          <p className="text-[26px] leading-[30px] font-semibold shrink-0">
+            17+
+          </p>
+          <p className="text-[12px] font-medium">
+            Hospital Rooms
+          </p>
+        </div>
+
+        <p className="mt-1 text-[11px] leading-[16px] text-white/85 pl-[2px]">
           Ut elit tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
     </div>
+
 
   </div>
 </div>

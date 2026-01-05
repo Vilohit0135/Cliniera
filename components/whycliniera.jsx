@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
                   />
 
                   {/* TITLE */}
-                  <h4 className="mt-6 text-[18px] font-semibold text-black">
+                  <h4 className="mt-6 text-[17px] font-semibold text-black">
                     {item.title}
                   </h4>
 

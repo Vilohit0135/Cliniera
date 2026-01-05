@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
+import ScrollToTop from "../components/resuable/scrollTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white text-black`}>
-        
+        <ScrollToTop />
         {/* NAVBAR (GLOBAL) */}
         <Navbar />
 

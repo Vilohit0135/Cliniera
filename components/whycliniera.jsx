@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 
 const items = [
   {
@@ -54,14 +53,11 @@ const items = [
 ];
 
 export default function WhyChooseUs() {
-  const [active, setActive] = useState(0);
-
   return (
     <section
-  id="why-cliniera"
-  className="w-full bg-[#fdfdfd] pt-36 pb-16 relative "
->
-
+      id="why-cliniera"
+      className="w-full bg-[#fdfdfd] pt-36 pb-16 relative"
+    >
       <div className="mx-auto max-w-[1440px] px-16">
 
         {/* HEADER */}
@@ -83,23 +79,18 @@ export default function WhyChooseUs() {
           "
         >
           {items.map((item, index) => {
-            const isActive = active === index;
+            const isActive = true; // always active
 
             return (
               <div key={index} className="relative flex justify-center">
 
-                {/* NODE */}
-                <div
-                  onClick={() => setActive(index)}
-                  className="cursor-pointer flex flex-col items-center text-center max-w-[220px]"
-                >
+                <div className="flex flex-col items-center text-center max-w-[220px]">
+                  
                   {/* ICON */}
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className={`h-20 w-20 transition-transform duration-300 ${
-                      isActive ? "scale-110 opacity-100" : "opacity-80"
-                    }`}
+                    className="h-20 w-20 scale-110 opacity-100 transition-transform duration-300"
                   />
 
                   {/* TITLE */}
@@ -107,27 +98,18 @@ export default function WhyChooseUs() {
                     {item.title}
                   </h4>
 
-                  {/* UNIFORM SEPARATOR */}
-                  <div
-                    className={`mt-3 mb-3 h-[2px] w-[40px] transition-colors duration-300 ${
-                      isActive ? "bg-[#E56027]" : "bg-black/30"
-                    }`}
-                  />
+                  {/* SEPARATOR */}
+                  <div className="mt-3 mb-3 h-[2px] w-[40px] bg-[#E56027]" />
 
-                  {/* DESCRIPTION */}
-                  <div
-                    className={`
-                      overflow-hidden transition-all duration-500 text-justify hyphens-auto
-                      ${isActive ? "max-h-[200px]" : "max-h-[48px]"}
-                    `}
-                  >
+                  {/* FULL DESCRIPTION */}
+                  <div className="overflow-hidden max-h-[200px] text-justify hyphens-auto">
                     <p className="text-[14px] leading-relaxed text-black/70">
-                      {isActive ? item.full : item.short}
+                      {item.full}
                     </p>
                   </div>
                 </div>
 
-                {/* CONNECTOR (ONLY LARGE SCREENS & SAME ROW) */}
+                {/* CONNECTOR */}
                 {index !== items.length - 1 && index % 5 !== 4 && (
                   <div className="hidden xl:block absolute top-[52px] right-[-72px] h-[1px] w-[120px] bg-black/40"></div>
                 )}
@@ -137,16 +119,12 @@ export default function WhyChooseUs() {
         </div>
       </div>
       {/* RIGHT BOTTOM VISUAL (OVERLAY) */}
-      <div className="hidden xl:block absolute bottom-[50px]
- right-20">
+      <div className="hidden xl:block absolute bottom-[50px] right-20">
 
-        {/* BIG GREY CARD */}
         <div className="h-[250px] w-[600px] rounded-xl bg-[#d9d9d9]" />
 
-        {/* OVERLAPPED SMALL CARD */}
         <div className="absolute right-[-40px] top-[80px] h-[220px] w-[180px] rounded-xl bg-[#d9d9d9] border-4 border-[#f4f1fb]" />
 
-        {/* STATS CARD */}
         <div className="absolute left-[-60px] bottom-[-20px] w-[220px] rounded-xl bg-black px-5 py-4 text-white shadow-xl">
           <h3 className="text-[28px] font-semibold">99%</h3>
           <p className="text-[14px] font-medium mt-1">

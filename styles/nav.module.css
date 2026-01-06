@@ -173,12 +173,13 @@
 
   .mobileDropdown {
     margin-top: 8px;
+
   }
 
   .mobileDropdown a {
     display: block;
     padding: 8px 0;
     font-size: 14px;
-    text-align: center;
+    
   }
 }

@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-cliniera"
-      className="w-full bg-[#fdfdfd] pt-36 pb-8 relative "
+      className="w-full bg-[#fdfdfd] pt-20 sm:pt-12 lg:pt-36 pb-4 relative "
     >
       <div className="mx-auto max-w-[1440px] px-6">
 

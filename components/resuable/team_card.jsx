@@ -24,7 +24,7 @@ export default function DoctorCard({ name, role, image, onClick }) {
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[50%_10%]"
           />
         )}
       </div>

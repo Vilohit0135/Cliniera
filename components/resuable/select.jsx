@@ -14,7 +14,7 @@ export default function Select({ placeholder, options = [], icon }) {
           h-[52px] w-full
           appearance-none
           rounded-full
-          border-2 border-black
+          border-1 border-black/20
           bg-white
           ${icon ? "pl-12" : "pl-6"} pr-12
           text-[14px] font-semibold text-black

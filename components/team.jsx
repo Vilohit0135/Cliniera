@@ -54,7 +54,7 @@ export default function OurTeam() {
 
   return (
     <section id="team" className="w-full bg-white py-8">
-      <div className="mx-auto max-w-[1440px] px-16">
+      <div className="mx-auto max-w-[1440px] px-6">
 
         {/* HEADER */}
         <p className="text-[14px] font-semibold text-[#E56027]">

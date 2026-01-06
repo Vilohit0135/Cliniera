@@ -1,11 +1,20 @@
 import Input from "./input";
 import Select from "./select";
+import PhoneInput from "./phoneInput";
 
 export default function AppointmentForm() {
   return (
-    <form className="rounded-xl bg-white p-8 shadow-lg">
+    <form className="rounded-xl bg-white p-4 shadow-lg">
+      <div className="mb-5">
+        <h3 className="text-[28px] font-semibold text-black">
+          Get in Touch
+        </h3>
+        <p className="mt-1 text-[14px] text-black/60">
+          You can reach us anytime
+        </p>
+      </div>
 
-      <div className="grid grid-cols-2 gap-5 max-sm:grid-cols-1">
+      <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
 
       <Input
         placeholder="Name"
@@ -17,14 +26,10 @@ export default function AppointmentForm() {
         icon="/icons_contact/mail.svg"
       />
 
-      <Input
-        placeholder="Telephone"
-        icon="/icons_contact/phone.svg"
-      />
-
-      <Input
-        placeholder="Number"
-        icon="/icons_contact/num.svg"
+      <Select
+        placeholder="Gender"
+        icon="/icons_contact/gender.svg"
+        options={["Male", "Female", "Other"]}
       />
 
       <Input
@@ -32,12 +37,9 @@ export default function AppointmentForm() {
         icon="/icons_contact/date.svg"
       />
 
-      <Select
-        placeholder="Gender"
-        icon="/icons_contact/gender.svg"
-        options={["Male", "Female", "Other"]}
-      />
-
+      <div className="col-span-2 max-sm:col-span-1">
+        <PhoneInput />
+      </div>
 
 
       </div>
@@ -46,9 +48,12 @@ export default function AppointmentForm() {
           placeholder="Services"
           icon="/icons_contact/serve.svg"
           options={[
-            "Clinical Research",
+            "Clinical Trial Management",
+            "Site Selection & Monitoring",
             "Regulatory Affairs",
-            "Medical Writing",
+            "Data Management & Analysis",
+            "Medical Writing & Communication",
+            "Product Approval"
           ]}
         />
 
@@ -70,7 +75,7 @@ export default function AppointmentForm() {
           className="
             w-full
             rounded-lg
-            border-2 border-black
+            border-1 border-black/20
             bg-white
             pl-12 pr-4 py-3
             text-[14px] font-semibold text-black
@@ -88,6 +93,17 @@ export default function AppointmentForm() {
       >
         Make Appointment
       </button>
+
+      <p className="mt-4 text-center text-[12px] leading-5 text-black/60">
+        By contacting us, you agree to our{" "}
+        <a href="/terms" className="font-medium text-black hover:underline">
+          Terms of service
+        </a>{" "}
+        and{" "}
+        <a href="/privacy-policy" className="font-medium text-black hover:underline">
+          Privacy Policy
+        </a>
+      </p>
     </form>
   );
 }

@@ -56,9 +56,9 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-cliniera"
-      className="w-full bg-[#fdfdfd] pt-36 pb-16 relative"
+      className="w-full bg-[#fdfdfd] pt-36 pb-8 relative "
     >
-      <div className="mx-auto max-w-[1440px] px-16">
+      <div className="mx-auto max-w-[1440px] px-6">
 
         {/* HEADER */}
         <p className="text-[14px] font-semibold uppercase tracking-wider text-[#E56027]">
@@ -75,14 +75,14 @@ export default function WhyChooseUs() {
             max-xl:grid-cols-4
             max-lg:grid-cols-3
             max-md:grid-cols-2
-            max-sm:grid-cols-1
+            max-sm:grid-cols-2
           "
         >
           {items.map((item, index) => {
             const isActive = true; // always active
 
             return (
-              <div key={index} className="relative flex justify-center">
+              <div key={index} className="relative flex justify-center hyphens-auto">
 
                 <div className="flex flex-col items-center text-center max-w-[220px]">
                   

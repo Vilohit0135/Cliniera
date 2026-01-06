@@ -52,30 +52,46 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-white py-8">
-      <div className="mx-auto max-w-[1440px] px-16">
+    <section id="services" className="w-full bg-white py-15">
+      <div className="mx-auto max-w-[1440px] px-6">
 
-        {/* HEADER */}
-        <div className="mb-16 grid grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-[14px] font-semibold text-[#E56027]">
-              What We Offer
-            </p>
-            <h2 className="mt-2 text-[36px] leading-[44px] font-semibold text-black">
-              Personalized Healthcare Solutions for Every Stage of Life
-            </h2>
-          </div>
+{/* HEADER */}
+<div
+  className="
+    mb-16
+    flex items-center justify-between
+    gap-8
 
-          <div>
-          <Link
-            href="/contact"
-            className="inline-flex h-[48px] items-center px-6 rounded-full bg-[#E56027] text-white text-[14px] font-medium hover:bg-[#ea6a10] transition translate-x-120"
-          >
-            Learn More
-          </Link>
+    max-md:flex-col
+    max-md:items-start
+  "
+>
+  {/* LEFT */}
+  <div>
+    <p className="text-[14px] font-semibold text-[#E56027]">
+      What We Offer
+    </p>
+    <h2 className="mt-2 text-[36px] leading-[44px] font-semibold text-black">
+      Our Services
+    </h2>
+  </div>
 
-          </div>
-        </div>
+  {/* RIGHT */}
+  <Link
+    href="/contact"
+    className="
+      inline-flex h-[48px] items-center px-6
+      rounded-full bg-[#E56027]
+      text-white text-[14px] font-medium
+      hover:bg-[#ea6a10] transition
+
+      max-md:self-start
+    "
+  >
+    Learn More
+  </Link>
+</div>
+
 
         {/* SERVICES GRID */}
         <div className="grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">

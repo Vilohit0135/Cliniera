@@ -204,17 +204,15 @@ export default function Hero() {
       <div
         className="
           absolute left-1/2 bottom-[-110px] z-20
-          w-full -translate-x-1/2 -translate-y-25
+          w-full -translate-x-1/ translate-y-115
 
           max-md:static
-          max-md:translate-x-0
-          max-md:translate-y-113
-          max-md:mt-6
+          max-md:mt-8
         "
       >
         <div
           className="
-            bg-[#E56027] px-8 py-4 text-white shadow-lg
+            bg-[#E56027] px-6 py-6 text-white shadow-lg
 
             /* DESKTOP */
             flex justify-between
@@ -222,10 +220,11 @@ export default function Hero() {
             /* TABLET + MOBILE */
             max-lg:grid
             max-lg:grid-cols-2
-            max-lg:gap-y-6
+            max-lg:gap-y-8
             max-lg:gap-x-6
+            max-lg:justify-items-start
           "
-        >
+          >
           {[
             ["50+", "Years of Experience", "/icons/Icon1.svg"],
             ["3,124+", "Satisfied Clients", "/icons/Icon2.svg"],
@@ -234,10 +233,7 @@ export default function Hero() {
           ].map(([num, label, icon]) => (
             <div
               key={label}
-              className="
-                flex items-center gap-3
-                max-lg:justify-start
-              "
+              className="flex items-start gap-3"
             >
               <img src={icon} className="h-9 w-9 shrink-0" />
 
@@ -255,6 +251,7 @@ export default function Hero() {
           ))}
         </div>
       </div>
+
 
     </section>
   );

@@ -13,7 +13,6 @@
   top: 0;
   z-index: 50;
   overflow-x: hidden;
-  
 }
 
 /* LOGO */
@@ -113,7 +112,7 @@
   gap: 20px;
 }
 
-/* MOBILE HAMBURGER */
+/* MOBILE HAMBURGER (DEFAULT) */
 .mobileHamburger {
   display: none;
   background: none;
@@ -127,23 +126,34 @@
   display: none;
 }
 
-/* MOBILE & TABLET */
+/* =========================
+   MOBILE & TABLET ONLY
+========================= */
 @media (max-width: 1024px) {
   .links,
   .socials {
     display: none;
   }
 
+  /* ✅ FIXED HAMBURGER VISIBILITY */
   .mobileHamburger {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+
+    color: #111;                    /* 🔥 FORCE ICON COLOR */
+    background: rgba(0, 0, 0, 0.06);/* 🔥 SUBTLE CONTRAST */
   }
 
+  /* SAFARI-SAFE MOBILE MENU */
   .mobileMenu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 85px;
     right: 16px;
 
@@ -169,17 +179,18 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    color: #111;
   }
 
   .mobileDropdown {
     margin-top: 8px;
-
   }
 
   .mobileDropdown a {
     display: block;
     padding: 8px 0;
     font-size: 14px;
-    
+    color: #111;
   }
 }

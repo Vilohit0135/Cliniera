@@ -153,7 +153,7 @@ export default async function ServiceDetail({ params }) {
 
   return (
     <section className="w-full bg-white py-12 overflow-x-hidden">
-      <div className="mx-auto max-w-[1440px] px-16 max-md:px-0">
+      <div className="mx-auto max-w-[1440px] px-16 max-lg:px-6 max-sm:px-4">
 
         {/* HEADER */}
         <div className="max-md:px-6">
@@ -183,9 +183,12 @@ export default async function ServiceDetail({ params }) {
               className="
                 mb-14 h-[360px] bg-[#d9d9d9] rounded-xl
                 max-md:h-[220px]
-                max-md:-mx-6
-                max-md:w-[calc(100%+3rem)]
-                max-md:rounded-none
+                max-lg:-mx-6
+                max-lg:w-[calc(100%+3rem)]
+                max-sm:mx-0
+                max-sm:w-full
+                max-sm:rounded-lg
+
               "
             />
 
@@ -222,21 +225,19 @@ export default async function ServiceDetail({ params }) {
           <aside
             className="
               col-span-4 space-y-8
-              justify-self-end
               max-lg:col-span-12
               max-lg:justify-self-auto
-              max-md:flex
-              max-md:flex-col
-              max-md:items-center
+              max-md:items-stretch
             "
           >
+
             {/* CTA */}
             <div
               className="
                 bg-[#E56027] text-white p-6 rounded-xl shadow-lg
 
                 /* MOBILE FIX */
-                max-md:mx-6
+                max-sm:mx-4
                 max-md:rounded-xl
               "
             >

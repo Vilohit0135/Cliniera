@@ -56,9 +56,17 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-cliniera"
-      className="w-full bg-[#fdfdfd] pt-20 sm:pt-12 lg:pt-36 pb-4 relative "
+      className="w-full bg-[#fdfdfd] pt-20 sm:pt-12 lg:pt-20 pb-4 relative"
     >
-      <div className="mx-auto max-w-[1440px] px-6">
+      <div
+          className="
+            mx-auto max-w-[1440px]
+            px-16
+            2xl:px-[120px]
+            max-md:px-6
+          "
+        >
+
 
         {/* HEADER */}
         <p className="text-[14px] font-semibold uppercase tracking-wider text-[#E56027]">

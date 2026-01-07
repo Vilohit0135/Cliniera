@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       className="
-        relative h-[800px] w-full bg-[#f5f5f5]
+        relative isolate h-[800px] w-full bg-[#f5f5f5]
         max-lg:h-auto
 
         /* MOBILE: reserve space for image + banner */
@@ -13,7 +13,8 @@ export default function Hero() {
       "
     >
       {/* LEFT BACKGROUND PANEL */}
-      <div className="absolute inset-y-0 left-0 w-full bg-[#f3d5bd]"></div>
+      <div className="absolute  inset-y-0 left-0 w-full bg-[#f3d5bd] z-0"></div>
+
 
       {/* CONTENT WRAPPER */}
       <div

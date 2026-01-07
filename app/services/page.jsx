@@ -53,44 +53,52 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="w-full bg-white py-15">
-      <div className="mx-auto max-w-[1440px] px-6">
-
-{/* HEADER */}
-<div
-  className="
-    mb-16
-    flex items-center justify-between
-    gap-8
-
-    max-md:flex-col
-    max-md:items-start
-  "
+      <div
+        className="
+          mx-auto max-w-[1440px]
+          px-16
+          2xl:px-[120px]
+          max-md:px-6
+        "
 >
-  {/* LEFT */}
-  <div>
-    <p className="text-[14px] font-semibold text-[#E56027]">
-      What We Offer
-    </p>
-    <h2 className="mt-2 text-[36px] leading-[44px] font-semibold text-black">
-      Our Services
-    </h2>
-  </div>
 
-  {/* RIGHT */}
-  <Link
-    href="/contact"
-    className="
-      inline-flex h-[48px] items-center px-6
-      rounded-full bg-[#E56027]
-      text-white text-[14px] font-medium
-      hover:bg-[#ea6a10] transition
 
-      max-md:self-start
-    "
-  >
-    Learn More
-  </Link>
-</div>
+      {/* HEADER */}
+      <div
+        className="
+          mb-16
+          flex items-center justify-between
+          gap-8
+
+          max-md:flex-col
+          max-md:items-start
+        "
+      >
+        {/* LEFT */}
+        <div>
+          <p className="text-[14px] font-semibold text-[#E56027]">
+            What We Offer
+          </p>
+          <h2 className="mt-2 text-[36px] leading-[44px] font-semibold text-black">
+            Our Services
+          </h2>
+        </div>
+
+        {/* RIGHT */}
+        <Link
+          href="/contact"
+          className="
+            inline-flex h-[48px] items-center px-6
+            rounded-full bg-[#E56027]
+            text-white text-[14px] font-medium
+            hover:bg-[#ea6a10] transition
+
+            max-md:self-start
+          "
+        >
+          Learn More
+        </Link>
+      </div>
 
 
         {/* SERVICES GRID */}

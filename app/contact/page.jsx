@@ -115,3 +115,165 @@ export default function ContactPage() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const servicesData = {
+  "clinical-trial-management": {
+    title: "Clinical Trial Management",
+    intro:
+      "CliniEra provides seamless end-to-end clinical trial management, ensuring quality execution, regulatory compliance, and timely delivery across all phases of clinical research.",
+    content: [
+      {
+        heading: "Overview",
+        text:
+          "CliniEra offers unmatched expertise, cutting-edge technology, and a commitment to accelerating clinical development—on time, every time. Our solutions ensure your clinical trials remain compliant, efficient, and aligned with real-world clinical needs.",
+      },
+      {
+        heading: "Our Approach",
+        text:
+          "Our clinical research specialists apply proven methodologies to deliver innovative solutions across all stages of clinical studies. We focus on quality, efficiency, and patient safety at every step.",
+      },
+      {
+        heading: "Key Capabilities",
+        points: [
+          "End-to-end clinical trial planning and execution",
+          "Patient recruitment and site coordination",
+          "Protocol adherence and risk management",
+          "Real-time monitoring and issue resolution",
+          "Regulatory compliance and quality assurance",
+        ],
+      },
+      {
+        heading: "Why CliniEra",
+        text:
+          "With extensive market experience and deep regulatory insight, CliniEra is your trusted partner for outsourcing clinical trials. We minimize risks, streamline processes, and accelerate approvals while maintaining the highest standards of excellence.",
+      },
+    ],
+  },
+
+  "site-selection-monitoring": {
+    title: "Site Selection & Monitoring",
+    intro:
+      "We optimize clinical trial success through strategic site selection and comprehensive monitoring, ensuring compliance, data integrity, and smooth trial operations.",
+    content: [
+      {
+        heading: "Strategic Site Selection",
+        text:
+          "Leveraging our robust investigator network and feasibility expertise, we identify high-performing trial sites that align with protocol requirements and recruitment goals.",
+      },
+      {
+        heading: "Monitoring Excellence",
+        points: [
+          "Feasibility assessments and site qualification",
+          "On-site and remote monitoring",
+          "Protocol deviation management",
+          "Data quality and audit readiness",
+        ],
+      },
+    ],
+  },
+
+  "regulatory-affairs": {
+    title: "Regulatory Affairs",
+    intro:
+      "CliniEra provides expert regulatory guidance to navigate complex global requirements and accelerate product development with confidence.",
+    content: [
+      {
+        heading: "Regulatory Strategy",
+        text:
+          "We craft tailored regulatory strategies for pharmaceutical, biotech, and medical device companies, ensuring compliance across development and commercialization stages.",
+      },
+      {
+        heading: "Our Expertise",
+        points: [
+          "IND, NDA, and MA submissions",
+          "Regulatory documentation and compliance",
+          "Pharmacovigilance support",
+          "Lifecycle management",
+        ],
+      },
+    ],
+  },
+
+  "data-management-analysis": {
+    title: "Data Management & Analysis",
+    intro:
+      "We transform clinical trial data into accurate, compliant, and actionable insights through robust data management and advanced analytics.",
+    content: [
+      {
+        heading: "Data Integrity & Quality",
+        text:
+          "Our data management services ensure accuracy, consistency, and regulatory compliance across all clinical trial datasets.",
+      },
+      {
+        heading: "Analytics Capabilities",
+        points: [
+          "Electronic Data Capture (EDC)",
+          "Biostatistics and statistical analysis",
+          "Data validation and quality control",
+          "Regulatory-ready reporting",
+        ],
+      },
+    ],
+  },
+
+  "medical-writing": {
+    title: "Medical Writing & Communication",
+    intro:
+      "CliniEra delivers clear, compliant, and impactful medical writing solutions to support regulatory submissions and scientific communication.",
+    content: [
+      {
+        heading: "Scientific & Regulatory Writing",
+        text:
+          "Our expert medical writers transform complex clinical data into clear, precise, and regulatory-compliant documentation.",
+      },
+      {
+        heading: "Deliverables",
+        points: [
+          "Clinical study reports (CSR)",
+          "Regulatory submissions",
+          "Scientific publications",
+          "Medical communication strategies",
+        ],
+      },
+    ],
+  },
+
+  "product-approval": {
+    title: "Product Approval",
+    intro:
+      "We streamline product approval processes in India by guiding companies through efficient and compliant regulatory pathways.",
+    content: [
+      {
+        heading: "Approval Expertise",
+        text:
+          "CliniEra supports pharmaceutical, biotech, and medical device companies through CDSCO and Indian regulatory approval processes.",
+      },
+      {
+        heading: "Approval Support",
+        points: [
+          "Regulatory strategy development",
+          "Submission preparation and review",
+          "Post-approval compliance",
+          "Regulatory authority liaison",
+        ],
+      },
+    ],
+  },
+};

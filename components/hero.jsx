@@ -204,46 +204,62 @@ export default function Hero() {
       <div
         className="
           absolute left-1/2 bottom-[-110px] z-20
-          w-full -translate-x-1/ translate-y-115
+          w-full -translate-x-1/2 -translate-y-25
 
           max-md:static
-          max-md:mt-8
+          max-md:translate-x-0
+          max-md:translate-y-113
+          max-md:mt-6
         "
       >
         <div
           className="
-            bg-[#E56027] px-6 py-6 text-white shadow-lg
+            bg-[#E56027] text-white shadow-lg
+
+            px-8 py-3
+            max-sm:px-5
+            max-sm:py-3
 
             /* DESKTOP */
             flex justify-between
 
-            /* TABLET + MOBILE */
+            /* TABLET */
             max-lg:grid
             max-lg:grid-cols-2
-            max-lg:gap-y-8
+            max-lg:gap-y-6
             max-lg:gap-x-6
-            max-lg:justify-items-start
+
+            /* MOBILE */
+            max-sm:grid-cols-1
+            max-sm:gap-y-4
           "
-          >
+        >
           {[
-            ["50+", "Years of Experience", "/icons/Icon1.svg"],
-            ["3,124+", "Satisfied Clients", "/icons/Icon2.svg"],
-            ["231+", "Experienced Doctors", "/icons/Icon3.svg"],
-            ["17+", "Hospital Rooms", "/icons/Icon4.svg"],
+            ["50+", "Years of Experience.", "/icons/Icon1.svg"],
+            ["3,124+", "Satisfied Clients.", "/icons/Icon2.svg"],
+            ["231+", "Experienced Doctors.", "/icons/Icon3.svg"],
+            ["17+", "Hospital Rooms.", "/icons/Icon4.svg"],
           ].map(([num, label, icon]) => (
             <div
               key={label}
-              className="flex items-start gap-3"
+              className="
+                flex items-center gap-3
+                max-sm:items-start
+              "
             >
               <img src={icon} className="h-9 w-9 shrink-0" />
 
-              <div>
+              <div >
                 <div className="flex items-baseline gap-2">
-                  <p className="text-[26px] font-semibold">{num}</p>
-                  <p className="text-[12px] font-medium">{label}</p>
+                  <p className="text-[26px] font-semibold max-sm:text-[22px]">
+                    {num}
+                  </p>
+                  <p className="text-[12px] font-medium relative -top-1 max-sm:text-[11px]">
+                    {label}
+                  </p>
                 </div>
 
-                <p className="mt-1 text-[11px] text-white/85">
+                <p className="mt-1 text-[11px] text-white/85 max-sm:text-[10px] relative -top-2">
                   Ut elit tellus, luctus nec ullamcorper mattis.
                 </p>
               </div>

@@ -149,54 +149,41 @@ const servicesData = {
 export default async function ServiceDetail({ params }) {
   const { slug } = await params;
   const service = servicesData[slug];
+
   if (!service) notFound();
 
   return (
-    <section className="w-full bg-white py-12 overflow-x-hidden">
-      <div className="mx-auto max-w-[1440px] px-16 max-lg:px-6 max-sm:px-4">
-
+    <section className="w-full bg-white py-10 overflow-x-hidden">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-16">
         {/* HEADER */}
-        <div className="max-md:px-6">
+        <div>
           <p className="mb-3 text-[13px] text-gray-500">
             Home <span className="mx-1">›</span> Services{" "}
             <span className="mx-1">›</span>
             <span className="text-[#E56027]">{service.title}</span>
           </p>
 
-          <h1 className="text-[38px] font-semibold text-black max-md:text-[30px]">
+          <h1 className="text-[26px] sm:text-[34px] font-semibold text-black">
             {service.title}
           </h1>
 
-          <p className="mt-4 max-w-[760px] text-[15px] leading-7 text-gray-600">
+          <p className="mt-4 text-[14px] leading-7 text-gray-600 max-w-none sm:max-w-[760px]">
             {service.intro}
           </p>
         </div>
 
         {/* GRID */}
-        <div className="mt-16 grid grid-cols-12 gap-14 max-lg:grid-cols-1">
-          
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* MAIN CONTENT */}
-          <div className="col-span-8 max-lg:col-span-12 max-md:px-6">
-            
+          <div className="lg:col-span-8">
             {/* IMAGE */}
-            <div
-              className="
-                mb-14 h-[360px] bg-[#d9d9d9] rounded-xl
-                max-md:h-[220px]
-                max-lg:-mx-6
-                max-lg:w-[calc(100%+3rem)]
-                max-sm:mx-0
-                max-sm:w-full
-                max-sm:rounded-lg
+            <div className="mb-10 h-[220px] sm:h-[320px] w-full rounded-xl bg-[#d9d9d9]" />
 
-              "
-            />
-
-            {/* TEXT */}
-            <div className="space-y-12 max-w-[900px]">
+            {/* TEXT CONTENT */}
+            <div className="space-y-10 max-w-none">
               {service.content.map((block, i) => (
                 <div key={i}>
-                  <h3 className="text-[22px] font-semibold text-black">
+                  <h3 className="text-[20px] font-semibold text-black">
                     {block.heading}
                   </h3>
 
@@ -209,9 +196,9 @@ export default async function ServiceDetail({ params }) {
                   {block.points && (
                     <ul className="mt-4 space-y-3 text-[14px] text-gray-700">
                       {block.points.map((pt, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="mt-2 h-2 w-2 rounded-full bg-[#E56027]" />
-                          {pt}
+                        <li key={idx} className="flex gap-3">
+                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#E56027]" />
+                          <span>{pt}</span>
                         </li>
                       ))}
                     </ul>
@@ -222,28 +209,13 @@ export default async function ServiceDetail({ params }) {
           </div>
 
           {/* SIDEBAR */}
-          <aside
-            className="
-              col-span-4 space-y-8
-              max-lg:col-span-12
-              max-lg:justify-self-auto
-              max-md:items-stretch
-            "
-          >
-
-            {/* CTA */}
-            <div
-              className="
-                bg-[#E56027] text-white p-6 rounded-xl shadow-lg
-
-                /* MOBILE FIX */
-                max-sm:mx-4
-                max-md:rounded-xl
-              "
-            >
+          <aside className="lg:col-span-4 flex flex-col gap-8 w-full">
+            {/* CTA CARD */}
+            <div className="w-full rounded-xl bg-[#E56027] p-6 text-white shadow-lg">
               <h4 className="text-[16px] font-semibold">
                 Take the First Step Today
               </h4>
+
               <p className="mt-3 text-[14px] leading-6 opacity-90">
                 Connect with our experts to accelerate your clinical journey.
               </p>
@@ -256,15 +228,7 @@ export default async function ServiceDetail({ params }) {
             </div>
 
             {/* OTHER SERVICES */}
-            <div
-              className="
-                bg-[#f6f6f6] p-6 rounded-xl
-
-                /* MOBILE FIX */
-                max-md:mx-6
-                max-md:rounded-xl
-              "
-            >
+            <div className="w-full rounded-xl bg-[#f6f6f6] p-6">
               <h4 className="mb-5 text-[16px] font-semibold text-black">
                 Other Services
               </h4>
@@ -274,11 +238,11 @@ export default async function ServiceDetail({ params }) {
                   <li key={key}>
                     <Link
                       href={`/services/${key}`}
-                      className={`block ${
+                      className={
                         key === slug
                           ? "font-semibold text-[#E56027]"
                           : "text-gray-700 hover:text-[#E56027]"
-                      }`}
+                      }
                     >
                       {s.title}
                     </Link>
@@ -292,4 +256,3 @@ export default async function ServiceDetail({ params }) {
     </section>
   );
 }
-

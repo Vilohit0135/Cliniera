@@ -33,3 +33,16 @@ body {
 html, body {
   overflow-x: hidden;
 }
+
+
+@keyframes bannerScrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+

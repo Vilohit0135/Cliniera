@@ -4,7 +4,23 @@ import PhoneInput from "./phoneInput";
 
 export default function AppointmentForm() {
   return (
-    <form className="rounded-xl bg-white p-4 shadow-lg">
+    <form className="rounded-xl bg-white p-4 shadow-lg"
+    onSubmit={async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log("FORM DATA:", data);
+
+    await fetch("/api/appointment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    alert("Appointment sent");
+  }}>
       <div className="mb-5">
         <h3 className="text-[28px] font-semibold text-black">
           Get in Touch
@@ -17,34 +33,42 @@ export default function AppointmentForm() {
       <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
 
       <Input
+        name='name'
         placeholder="Name"
         icon="/icons_contact/Frame.svg"
       />
 
       <Input
+        name="email"
         placeholder="Email"
         icon="/icons_contact/mail.svg"
       />
 
       <Select
+      name='gender'
         placeholder="Gender"
         icon="/icons_contact/gender.svg"
         options={["Male", "Female", "Other"]}
       />
 
       <Input
+        name='date'
         type="date"
         icon="/icons_contact/date.svg"
       />
 
       <div className="col-span-2 max-sm:col-span-1">
         <PhoneInput />
+        {/* <input type="hidden" name="countryName" />
+        <input type="hidden" name="phoneName" /> */}
       </div>
+
 
 
       </div>
       <div className="relative mt-5">
           <Select
+          name='service'
           placeholder="Services"
           icon="/icons_contact/serve.svg"
           options={[
@@ -70,6 +94,7 @@ export default function AppointmentForm() {
         />
 
         <textarea
+          name='message'
           rows={4}
           placeholder="Message"
           className="

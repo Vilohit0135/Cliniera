@@ -123,7 +123,7 @@ export default function Hero() {
                   "
                 >
                   <span>☎</span>
-                  <span>(+1)2345-6789-1123</span>
+                  <span>(+91) 9959279640</span>
                 </button>
               </div>
             </div>

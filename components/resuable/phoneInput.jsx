@@ -11,7 +11,7 @@ const countryCodes = [{ code: "+91", label: "IND" },
   // you can keep adding or later replace with a lib
 ];
 
-export default function PhoneInput() {
+  export default function PhoneInput({ countryName = "countryCode", phoneName = "phone"} ) {
   return (
     <div
       className="
@@ -25,6 +25,8 @@ export default function PhoneInput() {
     >
       {/* COUNTRY CODE */}
       <select
+        name={countryName}
+        defaultValue="+91"
         className="
           h-full
           w-[115px]
@@ -52,7 +54,9 @@ export default function PhoneInput() {
         />
 
         <input
+            name={phoneName}
             type="tel"
+            required
             placeholder="Phone number"
             inputMode="numeric"
             className="

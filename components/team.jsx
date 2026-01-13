@@ -18,7 +18,7 @@ const doctors = [
     clinical needs. Her creative and results-focused approach strengthens the organization’s
     strategic and scientific vision.
     `,
-    image: "/team/john-doe.jpg",
+    image: "/team/harshitha.jpg",
   },
   {
     name: "Mr. Kaushik M Gawali ",
@@ -35,7 +35,7 @@ const doctors = [
     School, he oversees clinical strategy, trials, and medical governance. His patient
     centric and evidence-based approach drives excellence in clinical outcomes and 
     medical innovation.`,
-    image: "/team/sebastian-junn.jpg",
+    image: "/team/amarnath.jpg",
   },
   {
     name: "Mr. Vikas Sharma ",
@@ -45,7 +45,7 @@ const doctors = [
     he provides statistical leadership for research projects and clinical studies. His work, 
     supported by multiple peer-reviewed publications, ensures methodological rigor, data 
     integrity, and impactful research outcomes.`,
-    image: "/team/cee-bloggs.jpg",
+    image: "/team/vikas.jpg",
   },
 ];
 

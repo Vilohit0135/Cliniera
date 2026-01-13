@@ -55,10 +55,10 @@ export default function ContactPage() {
 
             <div className="mt-6 space-y-2 text-[14px] text-black/80">
               <p>
-                <span className="font-medium">Email:</span> info@cliniera.com
+                <span className="font-medium">Email:</span> support@cliniera.in
               </p>
               <p>
-                <span className="font-medium">Phone:</span> +91 98765 43210
+                <span className="font-medium">Phone:</span> +91 9959279640
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   Media Inquiries
                 </h4>
                 <p className="mt-2">
-                  For media-related questions, contact press@cliniera.com
+                  For media-related questions, contact support@cliniera.in
                 </p>
               </div>
             </div>

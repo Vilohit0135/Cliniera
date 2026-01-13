@@ -1,4 +1,4 @@
-export default function Select({ placeholder, options = [], icon }) {
+export default function Select({ name,placeholder, options = [], icon }) {
   return (
     <div className="relative">
       {icon && (
@@ -10,6 +10,7 @@ export default function Select({ placeholder, options = [], icon }) {
       )}
 
       <select
+      name={name}
         className={`
           h-[52px] w-full
           appearance-none

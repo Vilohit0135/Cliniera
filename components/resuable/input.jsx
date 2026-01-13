@@ -1,4 +1,4 @@
-export default function Input({ placeholder, type = "text", icon }) {
+export default function Input({ name, placeholder, type = "text", icon }) {
   return (
     <div className="relative">
       {icon && (
@@ -10,6 +10,7 @@ export default function Input({ placeholder, type = "text", icon }) {
       )}
 
       <input
+        name={name}
         type={type}
         placeholder={placeholder}
         className={`

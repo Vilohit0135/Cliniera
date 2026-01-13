@@ -101,12 +101,13 @@ export default function NavBar() {
 
         {/* SOCIAL ICONS (DESKTOP ONLY) */}
         <div className={styles.socials}>
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          {/* <a href="https://facebook.com" target="_blank" aria-label="Facebook">
             <Image src="/icons/facebook.svg" alt="" width={24} height={24} />
           </a>
           <a href="https://twitter.com" target="_blank" aria-label="Twitter">
             <Image src="/icons/twitter.svg" alt="" width={24} height={24} />
-          </a>
+          </a> */}
+          <p className="text-[#E56027]">LinkedIn</p>
           <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
             <Image src="/icons/linkedin.svg" alt="" width={24} height={24} />
           </a>

@@ -19,12 +19,12 @@ export default function DoctorCard({ name, role, image, onClick }) {
       />
 
       {/* IMAGE AREA */}
-      <div className="absolute top-4 left-4 right-4 bottom-24 overflow-hidden rounded-xl bg-[#d9d9d9]">
+      <div className="absolute top-4 left-5 right-4 bottom-24 overflow-hidden rounded-xl bg-[#d9d9d9]">
         {image && (
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover object-[50%_10%]"
+            className="h-full w-full object-cover object-[50%_10%] translate-x-"
           />
         )}
       </div>

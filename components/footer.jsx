@@ -95,8 +95,8 @@ export default function Footer() {
               <h4 className="text-[16px] font-semibold">Information</h4>
               <div className="mt-2 h-[2px] w-25 bg-white" />
               <ul className="mt-4 space-y-3 text-[14px] text-white/90">
-                <li>(+1) 2345-6789-1123</li>
-                <li>info@cliniera.com</li>
+                <li>(+91) 9959279640</li>
+                <li>support@cliniera.in</li>
                 <li>India</li>
               </ul>
             </div>
@@ -111,12 +111,12 @@ export default function Footer() {
 
                 {/* SOCIAL LINKS */}
                 <ul className="mt-4 space-y-4 text-[14px] text-white/90">
-                  <li className="flex items-center gap-3">
+                  {/* <li className="flex items-center gap-3">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                       <img src="/icons/facebook.svg" className="h-5 w-5" />
                     </span>
                     Facebook
-                  </li>
+                  </li> */}
 
                   <li className="flex items-center gap-3">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
@@ -124,13 +124,13 @@ export default function Footer() {
                     </span>
                     LinkedIn
                   </li>
-
+{/* 
                   <li className="flex items-center gap-3">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                       <img src="/icons/twitter.svg" className="h-5 w-5" />
                     </span>
                     Twitter
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
@@ -157,17 +157,17 @@ export default function Footer() {
 
             {/* ICON BUTTONS */}
             <div className="flex gap-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                 <img src="/icons/facebook.svg" className="h-5 w-5" />
-              </div>
+              </div> */}
 
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                 <img src="/icons/linkedin.svg" className="h-5 w-5" />
               </div>
 
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                 <img src="/icons/twitter.svg" className="h-5 w-5" />
-              </div>
+              </div> */}
             </div>
           </div>
 

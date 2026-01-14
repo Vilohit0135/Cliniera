@@ -132,7 +132,7 @@ export default function AboutUs() {
         <p
           className="
             mx-auto mt-6 max-w-[900px]
-            text-center text-[14px] leading-7 text-gray-600
+            text-center text-[16px] leading-7 text-black
 
             max-lg:mx-0
             max-lg:text-left

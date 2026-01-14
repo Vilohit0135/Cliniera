@@ -33,7 +33,7 @@ export default function DoctorModal({ doctor, onClose }) {
 
         {/* INFO */}
         <div className="mt-5 text-center">
-          <h3 className="text-[18px] font-semibold">{doctor.name}</h3>
+          <h3 className="text-[18px] font-semibold text-black">{doctor.name}</h3>
           <p className="text-[#E56027] font-medium">{doctor.role}</p>
 
           <p className="mt-4 text-[14px] text-gray-600 text-justify leading-7 ">

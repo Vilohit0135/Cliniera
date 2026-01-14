@@ -3,6 +3,10 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
+
 
 :root {
   --background: #ffffff;
@@ -30,9 +34,7 @@ body {
 }
 
 
-html, body {
-  overflow-x: hidden;
-}
+
 
 
 @keyframes bannerScrollRight {

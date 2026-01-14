@@ -6,15 +6,23 @@ import WorkHours from "../../components/resuable/workHoursCard";
 export default function ContactPage() {
   return (
     <section className="w-full bg-[#f3d5bd] py-10 pb-0">
-      <div
-        className="
-          mx-auto max-w-[1440px]
-          px-16
-          2xl:px-[120px]
-          max-lg:px-10
-          max-md:px-6
-        "
-      >
+<div
+  className="
+    mx-auto max-w-[1440px] py-15
+
+    px-16                 /* laptop – unchanged */
+    max-md:px-6           /* mobile – unchanged */
+    max-sm:px-4           /* small mobile */
+
+    /* ONLY wider than laptop */
+    xl:max-w-[1600px]
+    xl:px-12
+
+    2xl:max-w-[1800px]
+    2xl:px-24
+  "
+>
+
         {/* CONTENT */}
         <div
           className="

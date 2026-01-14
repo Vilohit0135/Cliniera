@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ServiceCard from "../../components/resuable/serviceCard";
+import { motion, useReducedMotion } from "framer-motion";
 
 const services = [
   {
@@ -51,16 +52,28 @@ const services = [
 
 
 export default function Services() {
+  const shouldReduceMotion = useReducedMotion();
+  const container = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
+  const item = { hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.48, ease: "easeOut" } } };
+  const header = { hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } };
+
   return (
     <section id="services" className="w-full bg-white py-15">
       <div
         className="
-          mx-auto max-w-[1440px]
+          mx-auto
+          max-w-[1440px]
+
           px-16
-          2xl:px-[120px]
           max-md:px-6
+
+          xl:max-w-[1600px]
+          xl:px-12
+
+          2xl:max-w-[1800px]
+          2xl:px-10
         "
->
+      >
 
 
       {/* HEADER */}
@@ -75,38 +88,57 @@ export default function Services() {
         "
       >
         {/* LEFT */}
-        <div>
+        <motion.div
+          variants={header}
+          initial="hidden"
+          whileInView={shouldReduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <p className="text-[14px] font-semibold text-[#E56027]">
             What We Offer
           </p>
           <h2 className="mt-2 text-[36px] leading-[44px] font-semibold text-black">
             Our Services
           </h2>
-        </div>
+        </motion.div>
 
         {/* RIGHT */}
-        <Link
-          href="/contact"
-          className="
-            inline-flex h-[48px] items-center px-6
-            rounded-full bg-[#E56027]
-            text-white text-[14px] font-medium
-            hover:bg-[#ea6a10] transition
-
-            max-md:self-start
-          "
+        <motion.div
+          variants={header}
+          initial="hidden"
+          whileInView={shouldReduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.2 }}
         >
-          Learn More
-        </Link>
+          <Link
+            href="/contact"
+            className="
+              inline-flex h-[48px] items-center px-6
+              rounded-full bg-[#E56027]
+              text-white text-[14px] font-medium
+              hover:bg-[#ea6a10] transition
+
+              max-md:self-start
+              -translate-x-10
+            "
+          >
+            Learn More
+          </Link>
+        </motion.div>
       </div>
 
 
         {/* SERVICES GRID */}
-        <div className="grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView={shouldReduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.18 }}
+          className="grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
+        >
           {services.map((service, i) => (
             <ServiceCard key={i} service={service} />
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

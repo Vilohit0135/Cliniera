@@ -1,10 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function ServiceCard({ service }) {
+  const shouldReduceMotion = useReducedMotion();
+  const item = { hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.48, ease: "easeOut" } } };
   return (
-    <div
+    <motion.div
+      variants={item}
+      initial="hidden"
+      whileInView={shouldReduceMotion ? undefined : "show"}
+      viewport={{ once: true, amount: 0.18 }}
+      whileHover={shouldReduceMotion ? {} : { y: -6, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 220, damping: 20 }}
       className="
         group
         rounded-2xl bg-white
@@ -12,6 +21,9 @@ export default function ServiceCard({ service }) {
         shadow-lg
         transition
         hover:bg-[#E56027]
+
+        flex flex-col          /* 🔑 column layout */
+        min-h-[360px]
       "
     >
       {/* ICON */}
@@ -41,7 +53,7 @@ export default function ServiceCard({ service }) {
       </p>
 
       {/* LEARN MORE */}
-      <div className="mt-6 flex justify-center">
+      <div className="mt-auto flex justify-center pt-6">
         <Link
           href={`/services/${service.slug}`}
           className="
@@ -59,6 +71,6 @@ export default function ServiceCard({ service }) {
           Learn More →
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

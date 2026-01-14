@@ -154,7 +154,23 @@ export default async function ServiceDetail({ params }) {
 
   return (
     <section className="w-full bg-white py-10 overflow-x-hidden">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-16">
+      <div
+        className="
+          mx-auto max-w-[1440px] py-15
+
+          px-16                 /* laptop – unchanged */
+          max-md:px-6           /* mobile – unchanged */
+          max-sm:px-4           /* small mobile */
+
+          /* ONLY wider than laptop */
+          xl:max-w-[1600px]
+          xl:px-12
+
+          2xl:max-w-[1800px]
+          2xl:px-10
+        "
+      >
+
         {/* HEADER */}
         <div>
           <p className="mb-3 text-[13px] text-gray-500">

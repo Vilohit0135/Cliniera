@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react"; // ✅ useRef added
 import { useRouter } from "next/navigation";
 import styles from "../styles/nav.module.css";
 
@@ -31,6 +31,9 @@ export default function NavBar() {
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+
+  // ✅ TIMER REF (ONLY ADDITION)
+  const closeTimer = useRef(null);
 
   const handleLogoClick = () => {
     router.push("/");
@@ -65,16 +68,23 @@ export default function NavBar() {
               <div
                 key={link.label}
                 className={styles.dropdown}
-                onMouseEnter={() => setDesktopDropdownOpen(true)}
-                onMouseLeave={() => setDesktopDropdownOpen(false)}
+
+                // ✅ UPDATED HOVER LOGIC (ONLY CHANGE)
+                onMouseEnter={() => {
+                  if (closeTimer.current) {
+                    clearTimeout(closeTimer.current);
+                    closeTimer.current = null;
+                  }
+                  setDesktopDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  closeTimer.current = setTimeout(() => {
+                    setDesktopDropdownOpen(false);
+                  }, 200); // ⏱️ grace period
+                }}
               >
-                <button className={styles.link}>
-                  {link.label}
-                  <span
-                    className={`${styles.chevron} ${
-                      desktopDropdownOpen ? styles.chevronOpen : ""
-                    }`}
-                  />
+                <button className={`${styles.link} ${styles.linkWithChevron}`}>
+                  <span className={styles.linkLabel}>{link.label}</span>
                 </button>
 
                 {desktopDropdownOpen && (
@@ -101,12 +111,6 @@ export default function NavBar() {
 
         {/* SOCIAL ICONS (DESKTOP ONLY) */}
         <div className={styles.socials}>
-          {/* <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-            <Image src="/icons/facebook.svg" alt="" width={24} height={24} />
-          </a>
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-            <Image src="/icons/twitter.svg" alt="" width={24} height={24} />
-          </a> */}
           <p className="text-[#E56027]">LinkedIn</p>
           <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
             <Image src="/icons/linkedin.svg" alt="" width={24} height={24} />

@@ -1,5 +1,7 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
+
 const items = [
   {
     icon: "/icons/Icon1.svg",
@@ -53,31 +55,55 @@ const items = [
 ];
 
 export default function WhyChooseUs() {
+  const shouldReduceMotion = useReducedMotion();
+  const container = { hidden: {}, show: { transition: { staggerChildren: 0 } } };
+  const tile = { hidden: { opacity: 0, y: 14 }, show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.48, ease: "easeOut", delay: i * 0.14 } }) };
+  const header = { hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } };
+
   return (
     <section
       id="why-cliniera"
       className="w-full bg-[#fdfdfd] pt-20 sm:pt-12 lg:pt-20 pb-4 relative"
     >
       <div
-          className="
-            mx-auto max-w-[1440px]
-            px-16
-            2xl:px-[120px]
-            max-md:px-6
-          "
-        >
+        className="
+          mx-auto
+          max-w-[1440px]
+
+          px-16
+          max-md:px-6
+
+          xl:max-w-[1600px]
+          xl:px-12
+
+          2xl:max-w-[1800px]
+          2xl:px-10
+        "
+      >
+
 
 
         {/* HEADER */}
-        <p className="text-[14px] font-semibold uppercase tracking-wider text-[#E56027]">
-          Why Choose Us
-        </p>
-        <h2 className="mt-2 text-[40px] leading-[48px] font-semibold text-black">
-          Why Choose Cliniera
-        </h2>
+        <motion.div
+          variants={header}
+          initial={shouldReduceMotion ? "show" : "hidden"}
+          whileInView={shouldReduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <p className="text-[14px] font-semibold uppercase tracking-wider text-[#E56027]">
+            Why Choose Us
+          </p>
+          <h2 className="mt-2 text-[40px] leading-[48px] font-semibold text-black">
+            Why Choose Cliniera
+          </h2>
+        </motion.div>
 
         {/* FLOW GRID */}
-        <div
+        <motion.div
+          variants={container}
+          initial={shouldReduceMotion ? "show" : "hidden"}
+          whileInView={shouldReduceMotion ? undefined : "show"}
+          viewport={{ once: true, amount: 0.18 }}
           className="
             mt-20 grid grid-cols-5 gap-x-12 gap-y-20
             max-xl:grid-cols-4
@@ -90,7 +116,16 @@ export default function WhyChooseUs() {
             const isActive = true; // always active
 
             return (
-              <div key={index} className="relative flex justify-center hyphens-auto">
+              <motion.div
+                key={index}
+                variants={tile}
+                custom={index}
+                initial={shouldReduceMotion ? "show" : "hidden"}
+                whileInView={shouldReduceMotion ? undefined : "show"}
+                viewport={{ once: true, amount: 0.18 }}
+                whileHover={shouldReduceMotion ? {} : { y: -6, scale: 1.02 }}
+                className="relative flex justify-center hyphens-auto"
+              >
 
                 <div className="flex flex-col items-center text-center max-w-[220px]">
                   
@@ -121,10 +156,10 @@ export default function WhyChooseUs() {
                 {index !== items.length - 1 && index % 5 !== 4 && (
                   <div className="hidden xl:block absolute top-[52px] right-[-72px] h-[1px] w-[120px] bg-black/40"></div>
                 )}
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
       {/* RIGHT BOTTOM VISUAL (OVERLAY) */}
       <div className="hidden xl:block absolute bottom-[50px] right-20">

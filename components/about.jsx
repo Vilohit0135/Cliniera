@@ -21,11 +21,17 @@ export default function AboutUs() {
     <section id="about" className="w-full bg-white py-12">
       <div
         className="
-          mx-auto max-w-[1440px]
+          mx-auto
+          max-w-[1440px]
+
           px-16
-          2xl:px-[120px]
           max-md:px-6
-          
+
+          xl:max-w-[1600px]
+          xl:px-12
+
+          2xl:max-w-[1800px]
+          2xl:px-10
         "
       >
         {/* TOP TEXT */}

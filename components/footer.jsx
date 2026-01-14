@@ -7,9 +7,20 @@ export default function Footer() {
       <div
         className="
           mx-auto max-w-[1440px] py-15
-          px-16 max-xl:px-10 max-md:px-6 max-sm:px-4
+
+          px-16                 /* laptop – unchanged */
+          max-md:px-6           /* mobile – unchanged */
+          max-sm:px-4           /* small mobile */
+
+          /* ONLY wider than laptop */
+          xl:max-w-[1600px]
+          xl:px-12
+
+          2xl:max-w-[1800px]
+          2xl:px-10
         "
       >
+
         <div
           className="
             grid grid-cols-5 gap-12
@@ -180,13 +191,24 @@ export default function Footer() {
         <div
           className="
             mx-auto max-w-[1440px]
-            px-16 max-md:px-6
             py-6
+
+            px-16                 /* laptop – unchanged */
+            max-md:px-6           /* mobile – unchanged */
+
+            /* ONLY wider than laptop */
+            xl:max-w-[1600px]
+            xl:px-12
+
+            2xl:max-w-[1800px]
+            2xl:px-10
+
             flex justify-between items-center
             text-[13px] text-white/90
             max-md:flex-col max-md:gap-4
           "
         >
+
           <p>© CliniEra 2026. Developed by SuperCX</p>
           <div className="flex gap-6">
             <Link href="/terms">Terms</Link>

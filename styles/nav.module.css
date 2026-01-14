@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  height: 85px;
+  height: 80px;
 
   padding-left: clamp(24px, 5vw, 120px);
   padding-right: clamp(24px, 5vw, 120px);
@@ -69,7 +69,7 @@
   position: absolute;
   top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-35%);
   min-width: 240px;
   background: white;
   border-radius: 10px;
@@ -106,6 +106,17 @@
 .chevronOpen {
   transform: rotate(180deg);
 }
+
+.linkWithChevron {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;            /* space between text and arrow */
+}
+
+.linkLabel {
+  line-height: 1;
+}
+
 
 /* SOCIALS */
 .socials {

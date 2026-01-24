@@ -327,12 +327,12 @@ export default function Hero() {
           className="
             bg-[#E56027] text-white shadow-lg
 
-            px-8 py-3
+            px-8 py-4
             max-sm:px-5
             max-sm:py-3
 
             /* DESKTOP */
-            flex justify-between
+            flex justify-between items-center
 
             /* TABLET */
             max-lg:grid
@@ -353,13 +353,14 @@ export default function Hero() {
           ].map(([num, label, icon]) => {
             const numeric = parseInt(num.replace(/\D/g, ""), 10) || 0;
             const hasPlus = /\+$/.test(num);
+
             return (
               <div
                 key={label}
                 className="
-                flex items-center gap-3
-                max-sm:items-start
-              "
+                  flex items-center gap-3
+                  max-sm:items-start
+                "
               >
                 <img src={icon} className="h-9 w-9 shrink-0" />
 
@@ -368,12 +369,15 @@ export default function Hero() {
                     <p className="text-[26px] font-semibold max-sm:text-[22px]">
                       <Counter to={numeric} suffix={hasPlus ? "+" : ""} />
                     </p>
-                    <p className="text-[12px] font-medium relative -top-1 max-sm:text-[11px]">
+
+                    {/* 🔧 REMOVED relative top offset */}
+                    <p className="text-[12px] font-medium max-sm:text-[11px]">
                       {label}
                     </p>
                   </div>
 
-                  <p className="mt-1 text-[11px] text-white/85 max-sm:text-[10px] relative -top-2">
+                  {/* 🔧 REMOVED relative top offset */}
+                  <p className="mt-1 text-[11px] text-white/85 max-sm:text-[10px]">
                     Ut elit tellus, luctus nec ullamcorper mattis.
                   </p>
                 </div>
@@ -382,6 +386,7 @@ export default function Hero() {
           })}
         </div>
       </div>
+
 
 
     </section>

@@ -332,7 +332,7 @@ export default function Hero() {
             max-sm:py-3
 
             /* DESKTOP */
-            flex justify-between items-center
+            flex justify-center items-center gap-x-80
 
             /* TABLET */
             max-lg:grid
@@ -348,8 +348,7 @@ export default function Hero() {
           {[
             ["20+", "Years of Collective Team Experience.", "/icons/Icon1.svg"],
             ["7+", "Satisfied Clients.", "/icons/Icon2.svg"],
-            ["231+", "Experienced Doctors.", "/icons/Icon3.svg"],
-            ["17+", "Hospital Rooms.", "/icons/Icon4.svg"],
+           
           ].map(([num, label, icon]) => {
             const numeric = parseInt(num.replace(/\D/g, ""), 10) || 0;
             const hasPlus = /\+$/.test(num);

@@ -112,7 +112,7 @@ export default function NavBar() {
         {/* SOCIAL ICONS (DESKTOP ONLY) */}
         <div className={styles.socials}>
           <p className="text-[#E56027]">LinkedIn</p>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/cliniera-research-solutions/" target="_blank" aria-label="LinkedIn">
             <Image src="/icons/linkedin.svg" alt="" width={24} height={24} />
           </a>
         </div>

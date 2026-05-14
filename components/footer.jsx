@@ -133,7 +133,7 @@ export default function Footer() {
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                       <img src="/icons/linkedin.svg" className="h-5 w-5" />
                     </span>
-                    LinkedIn
+                    <a href="https://www.linkedin.com/company/cliniera-research-solutions/" target="_blank" className="hover:underline">LinkedIn</a>
                   </li>
 {/* 
                   <li className="flex items-center gap-3">
@@ -166,15 +166,14 @@ export default function Footer() {
             {/* WHITE SEPARATOR */}
             <div className="h-[2px] w-25 bg-white" />
 
-            {/* ICON BUTTONS */}
-            <div className="flex gap-4">
+              <div className="flex gap-4">
               {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                 <img src="/icons/facebook.svg" className="h-5 w-5" />
               </div> */}
 
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <a href="https://www.linkedin.com/company/cliniera-research-solutions/" target="_blank" className="flex h-8 w-8 items-center justify-center rounded-full bg-white hover:bg-gray-100 transition">
                 <img src="/icons/linkedin.svg" className="h-5 w-5" />
-              </div>
+              </a>
 
               {/* <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
                 <img src="/icons/twitter.svg" className="h-5 w-5" />

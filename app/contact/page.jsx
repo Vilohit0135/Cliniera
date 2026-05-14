@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <span className="font-medium">Email:</span> support@cliniera.in
               </p>
               <p>
-                <span className="font-medium">Phone:</span> +91 9959279640
+                <span className="font-medium">Phone:</span> +91 8897532848
               </p>
             </div>
 

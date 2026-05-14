@@ -106,7 +106,7 @@ export default function Footer() {
               <h4 className="text-[16px] font-semibold">Information</h4>
               <div className="mt-2 h-[2px] w-25 bg-white" />
               <ul className="mt-4 space-y-3 text-[14px] text-white/90">
-                <li>(+91) 9959279640</li>
+                <li>(+91) 8897532848</li>
                 <li>support@cliniera.in</li>
                 <li>India</li>
               </ul>

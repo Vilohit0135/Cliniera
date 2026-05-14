@@ -206,7 +206,7 @@ export default function Hero() {
                   "
                 >
                   <span>☎</span>
-                  <span>(+91) 9959279640</span>
+                  <span>(+91) 8897532848</span>
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -226,9 +226,9 @@ export default function Hero() {
                   <h4 className="text-[18px] font-semibold text-black">
                     Healthy Advice
                   </h4>
-                  <p className="mt-1 text-[15px] text-black/70">
+                  {/* <p className="mt-1 text-[15px] text-black/70">
                     Ut elit tellus, luctus nec ullamcorper mattis.
-                  </p>
+                  </p> */}
                 </div>
               </div>
 
@@ -238,9 +238,9 @@ export default function Hero() {
                   <h4 className="text-[18px] font-semibold text-black">
                     24/7 Support
                   </h4>
-                  <p className="mt-1 text-[15px] text-black/70">
+                  {/* <p className="mt-1 text-[15px] text-black/70">
                     Ut elit tellus, luctus nec ullamcorper mattis.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -346,8 +346,8 @@ export default function Hero() {
           "
         >
           {[
-            ["50+", "Years of Experience.", "/icons/Icon1.svg"],
-            ["3,124+", "Satisfied Clients.", "/icons/Icon2.svg"],
+            ["20+", "Years of Collective Team Experience.", "/icons/Icon1.svg"],
+            ["7+", "Satisfied Clients.", "/icons/Icon2.svg"],
             ["231+", "Experienced Doctors.", "/icons/Icon3.svg"],
             ["17+", "Hospital Rooms.", "/icons/Icon4.svg"],
           ].map(([num, label, icon]) => {

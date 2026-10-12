@@ -32,7 +32,7 @@ export default function ContactPage() {
             max-lg:gap-16
           "
         >
-          {/* LEFT CONTENT */}
+          {/* LEFT CONTENT owner vilohit */}
           <div className="max-w-[520px] mt-10 max-lg:mt-0">
             {/* HEADER */}
             <p className="text-[14px] font-semibold uppercase tracking-wider text-[#E56027]">
@@ -99,7 +99,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* RIGHT FORM CARD */}
+          {/* RIGHT FORM CARD owner vilohit */}
           <div
             className="
               w-full max-w-[500px]
